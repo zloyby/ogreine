@@ -245,7 +245,9 @@
             </plugin>
 
             <!--
-                The actual maven-gae-plugin. Type "mvn gae:run" to run project, "mvn gae:deploy" to upload to GAE.
+                The actual maven-gae-plugin.
+                Type "mvn gae:run" to run project, "mvn gae:deploy" to upload to GAE.
+                Type "mvn gae:unpack" to download GAE SDK for <sdkDir>${gae.home}</sdkDir>.
             -->
             <plugin>
                 <groupId>net.kindleit</groupId>
@@ -253,7 +255,6 @@
                 <version>0.9.0</version>
                 <configuration>
                     <serverId>ogreine.google.com</serverId>
-                    <!--<sdkDir>${gae.home}</sdkDir>-->
                     <appDir>${project.build.directory}/${project.build.finalName}</appDir>
                 </configuration>
                 <dependencies>
