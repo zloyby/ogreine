@@ -9,7 +9,7 @@ import java.util.Date;
  */
 public class Index extends Page {
 
-    @SuppressWarnings( { "FieldCanBeLocal" })
+    @SuppressWarnings({ "FieldCanBeLocal" })
     private Date time = new Date();
 
     public Index() {

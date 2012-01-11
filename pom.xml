@@ -11,13 +11,15 @@
     <packaging>war</packaging>
     <name>ogreine</name>
 
-    <pluginRepositories>
-        <pluginRepository>
-            <id>maven-gae-plugin-repo</id>
-            <name>Maven Google App Engine Repository</name>
-            <url>http://maven-gae-plugin.googlecode.com/svn/repository/</url>
-        </pluginRepository>
-    </pluginRepositories>
+    <!--
+        <pluginRepositories>
+            <pluginRepository>
+                <id>maven-gae-plugin-repo</id>
+                <name>Maven Google App Engine Repository</name>
+                <url>http://maven-gae-plugin.googlecode.com/svn/repository/</url>
+            </pluginRepository>
+        </pluginRepositories>
+    -->
 
     <!-- Specify hard-coded project properties here -->
     <properties>
@@ -30,15 +32,13 @@
 
         <!--
               Specify AppEngine version for your project. It should match SDK
-              version pointed to by ${gae.home} property (Typically, one used by
-              your Eclipse plug-in)
-          -->
-        <gae.version>1.5.3</gae.version>
-        <appengine.sdk.root>c:/java/appengine-java-sdk-1.5.3</appengine.sdk.root>
+              version pointed to by ${gae.home} property
+        -->
+        <gae.version>1.6.1</gae.version>
 
         <!--
-              Upload to http://test.latest.<applicationName>.appspot.com by default
-          -->
+              Upload to http://test.latest.ogreine.appspot.com by default
+        -->
         <gae.application.version>test</gae.application.version>
     </properties>
 
@@ -221,7 +221,7 @@
                     <dependency>
                         <groupId>javax.jdo</groupId>
                         <artifactId>jdo2-api</artifactId>
-                        <version>2.3-eb</version>
+                        <version>2.3-ec</version>
                         <scope>runtime</scope>
                     </dependency>
                 </dependencies>
@@ -250,11 +250,11 @@
             <plugin>
                 <groupId>net.kindleit</groupId>
                 <artifactId>maven-gae-plugin</artifactId>
-                <version>0.8.4</version>
+                <version>0.9.0</version>
                 <configuration>
-                    <serverId>appengine.google.com</serverId>
-                    <sdkDir>${appengine.sdk.root}</sdkDir>
-                    <appDir>${basedir}/war</appDir>
+                    <serverId>ogreine.google.com</serverId>
+                    <!--<sdkDir>${gae.home}</sdkDir>-->
+                    <appDir>${project.build.directory}/${project.build.finalName}</appDir>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -293,7 +293,7 @@
         <!--
               We can configure our integration server to activate this profile and
               perform gae:deploy, thus uploading latest snapshot to the
-              http://1.latest.<applicationName>.appspot.com automatically
+              http://1.latest.ogreine.appspot.com automatically
           -->
         <profile>
             <id>integration-build</id>
@@ -304,9 +304,9 @@
 
         <!--
               This profile will activate automatically during release and upload
-              application to the http://2.latest.<applicationName>.appspot.com (We
+              application to the http://2.latest.ogreine.appspot.com (We
               might want to set the 2nd version as our applications Default version
-              to be accessible at http://<applicationName>.appspot.com)
+              to be accessible at http://ogreine.appspot.com)
           -->
         <profile>
             <id>release-build</id>

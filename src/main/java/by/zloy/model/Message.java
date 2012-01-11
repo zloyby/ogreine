@@ -1,13 +1,11 @@
-
 package by.zloy.model;
-
-import java.io.Serializable;
 
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
+import java.io.Serializable;
 
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
 public class Message implements Serializable {
@@ -19,21 +17,21 @@ public class Message implements Serializable {
     private Long id;
 
     @Persistent
-	private String text;
-	
+    private String text;
+
     public Long getId() {
-		return id;
-	}
-    
+        return id;
+    }
+
     public void setId(Long id) {
-		this.id = id;
-	}
-    
-	public String getText() {
-		return text;
-	}
-	
-	public void setText(String text) {
-		this.text = text;
-	}
+        this.id = id;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
 }
