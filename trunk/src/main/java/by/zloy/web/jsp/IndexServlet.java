@@ -1,4 +1,4 @@
-package by.zloy.web;
+package by.zloy.web.jsp;
 
 import by.zloy.model.Message;
 import by.zloy.server.MessageRepository;
@@ -15,9 +15,7 @@ import java.util.Collection;
 
 public class IndexServlet extends HttpServlet {
 
-    @SuppressWarnings("unused")
-    private static final Logger log = LoggerFactory
-            .getLogger(IndexServlet.class);
+    private static final Logger log = LoggerFactory.getLogger(IndexServlet.class);
 
     private MessageRepository messageRepository = new MessageRepository();
 
@@ -45,7 +43,7 @@ public class IndexServlet extends HttpServlet {
             log.debug("messages: " + messages);
         }
 
-        forward(request, response, "index.jsp");
+        forward(request, response, "jsp/index.jsp");
     }
 
     @Override
@@ -95,7 +93,7 @@ public class IndexServlet extends HttpServlet {
             rd.forward(request, response);
         } catch (Throwable tr) {
             if (log.isErrorEnabled()) {
-                log.error("Cought Exception: " + tr.getMessage());
+                log.error("Exception: " + tr.getMessage());
                 log.debug("StackTrace:", tr);
             }
         }

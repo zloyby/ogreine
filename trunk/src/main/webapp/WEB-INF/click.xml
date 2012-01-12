@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<click-app charset="UTF-8">
-    <pages>
-        <page path="index.htm" classname="by.zloy.web.Index"/>
-    </pages>
+<click-app charset="UTF-8" locale="ru">
+    <headers>
+        <header name="Content-Type" value="text/html;charset=UTF-8"/>
+    </headers>
+    <pages package="by.zloy.web"/>
     <mode value="development"/>
 </click-app>
