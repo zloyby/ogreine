@@ -5,7 +5,7 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
 
-    <!-- Use for click: -->
+    <!-- Use for click: index.htm call templates -->
     <listener>
         <listener-class>org.apache.click.extras.gae.GoogleAppEngineListener</listener-class>
     </listener>
@@ -17,10 +17,15 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>ClickServlet</servlet-name>
-        <url-pattern>*.html</url-pattern>
+        <url-pattern>*.htm</url-pattern>
+    </servlet-mapping>
+    <!-- Inform ClickServlet to serve static resources contained under the /click/* directory directly from Click's JAR files. -->
+    <servlet-mapping>
+        <servlet-name>ClickServlet</servlet-name>
+        <url-pattern>/click/*</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
-        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
     </welcome-file-list>
 
     <!-- Use for jsp: index.jsp has been called from IndexServlet -->
