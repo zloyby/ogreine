@@ -6,7 +6,7 @@
 
     <!-- The Basics -->
     <groupId>by.zloy</groupId>
-    <artifactId>orgeine</artifactId>
+    <artifactId>ogreine</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>ogreine</name>
