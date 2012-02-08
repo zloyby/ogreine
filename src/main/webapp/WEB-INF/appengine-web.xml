@@ -5,10 +5,24 @@
     <application>ogreine</application>
     <version>test</version>
 
+    <!-- Configure java.util.logging -->
     <system-properties>
         <property name="java.util.logging.config.file" value="WEB-INF/classes/logging.properties"/>
     </system-properties>
 
+    <!-- Enable HttpSession usage -->
     <sessions-enabled>true</sessions-enabled>
+
+    <!-- Exclude the following files from being served as static files.
+         Use Click's PerformanceFilter to set the appropriate cache headers
+         for these resources.
+     -->
+    <static-files>
+        <exclude path="**.htm" />
+        <exclude path="**.css" />
+        <exclude path="**.js" />
+        <exclude path="**.gif" />
+        <exclude path="**.png" />
+    </static-files>
 
 </appengine-web-app>

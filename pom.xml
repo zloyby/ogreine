@@ -65,28 +65,6 @@
             <version>1.1</version>
         </dependency>
 
-        <!--
-              J2EE Servlet API. We need it to compile IndexServlet class. You can
-              probably remove it, if you don't explicitly use Servlets
-          -->
-        <dependency>
-            <groupId>org.apache.geronimo.specs</groupId>
-            <artifactId>geronimo-servlet_2.5_spec</artifactId>
-            <version>1.2</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <!--
-              Make use of JSP tags. Remove, if you don't use JSPs
-          -->
-        <dependency>
-            <artifactId>standard</artifactId>
-            <groupId>taglibs</groupId>
-            <version>1.1.2</version>
-            <type>jar</type>
-            <scope>runtime</scope>
-        </dependency>
-
         <!-- These dependencies are here just for enabling logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
