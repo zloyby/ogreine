@@ -11,15 +11,13 @@
     <packaging>war</packaging>
     <name>ogreine</name>
 
-    <!--
-        <pluginRepositories>
-            <pluginRepository>
-                <id>maven-gae-plugin-repo</id>
-                <name>Maven Google App Engine Repository</name>
-                <url>http://maven-gae-plugin.googlecode.com/svn/repository/</url>
-            </pluginRepository>
-        </pluginRepositories>
-    -->
+    <pluginRepositories>
+        <pluginRepository>
+            <id>maven-gae-plugin-repo</id>
+            <name>Maven Google App Engine Repository</name>
+            <url>http://maven-gae-plugin.googlecode.com/svn/repository/</url>
+        </pluginRepository>
+    </pluginRepositories>
 
     <!-- Specify hard-coded project properties here -->
     <properties>
