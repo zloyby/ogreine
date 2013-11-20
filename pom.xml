@@ -37,6 +37,7 @@
 			  version pointed to by ${gae.home} property
 		-->
 		<gae.version>1.8.0</gae.version>
+		<gae.home>/Users/eugene/java/appengine-java-sdk-1.8.0</gae.home>
 
 		<!--
 			  Upload to http://test.latest.ogreine.appspot.com by default
