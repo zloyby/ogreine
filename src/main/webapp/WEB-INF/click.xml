@@ -5,7 +5,7 @@
 	If this value is defined it will override Locale returned by the request.
 	<click-app charset="UTF-8" locale="ru">
 -->
-<click-app charset="UTF-8" locale="ru">
+<click-app charset="UTF-8">
 	<headers>
 		<header name="Content-Type" value="text/html;charset=UTF-8"/>
 	</headers>
