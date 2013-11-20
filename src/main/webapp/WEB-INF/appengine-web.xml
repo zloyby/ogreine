@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0"
-                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="http://appengine.google.com/ns/1.0 http://googleappengine.googlecode.com/svn/branches/1.2.1/java/docs/appengine-web.xsd">
-    <application>ogreine</application>
-    <version>test</version>
+				   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				   xsi:schemaLocation="http://appengine.google.com/ns/1.0 http://googleappengine.googlecode.com/svn/branches/1.2.1/java/docs/appengine-web.xsd">
+	<threadsafe>true</threadsafe>
+	<application>ogreine</application>
+	<version>test</version>
 
-    <!-- Configure java.util.logging -->
-    <system-properties>
-        <property name="java.util.logging.config.file" value="WEB-INF/classes/logging.properties"/>
-    </system-properties>
+	<!-- Configure java.util.logging -->
+	<system-properties>
+		<property name="java.util.logging.config.file" value="WEB-INF/classes/logging.properties"/>
+	</system-properties>
 
-    <!-- Enable HttpSession usage -->
-    <sessions-enabled>true</sessions-enabled>
+	<!-- Enable HttpSession usage -->
+	<sessions-enabled>true</sessions-enabled>
 
-    <!-- Exclude the following files from being served as static files.
-         Use Click's PerformanceFilter to set the appropriate cache headers
-         for these resources.
-     -->
-    <static-files>
-        <exclude path="**.htm" />
-        <exclude path="**.css" />
-        <exclude path="**.js" />
-        <exclude path="**.gif" />
-        <exclude path="**.png" />
-    </static-files>
+	<!-- Exclude the following files from being served as static files.
+		 Use Click's PerformanceFilter to set the appropriate cache headers
+		 for these resources.
+	 -->
+	<static-files>
+		<exclude path="**.htm"/>
+		<exclude path="**.css"/>
+		<exclude path="**.js"/>
+		<exclude path="**.gif"/>
+		<exclude path="**.png"/>
+	</static-files>
 
 </appengine-web-app>
