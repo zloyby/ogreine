@@ -15,8 +15,8 @@ Commands of Google Cloud
 To test your app:
 > mvn clean package
 > mvn appengine:run
-@ visit http://localhost:8080/
+@visit http://localhost:8080/
 
 To deploy your application:
 > mvn appengine:deploy
-@ visit http://ogreine.appspot.com/
+@visit http://ogreine.appspot.com/
