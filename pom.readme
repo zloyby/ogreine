@@ -1,0 +1,22 @@
+Commands of Google Cloud
+
+> gcloud init
+
+> gcloud config list
+> gcloud auth list
+> gcloud config configurations list
+
+> gcloud config configurations activate CONFIGURATION_NAMES
+> gcloud config configurations delete CONFIGURATION_NAMES
+
+------------------------------------------------------------------------------------------
+@see https://cloud.google.com/appengine/docs/java/tools/using-maven
+
+To test your app:
+> mvn clean package
+> mvn appengine:run
+@ visit http://localhost:8080/
+
+To deploy your application:
+> mvn appengine:deploy
+@ visit http://ogreine.appspot.com/
