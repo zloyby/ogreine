@@ -3,8 +3,15 @@
 .idea
 /out/
 /target/
+/lib
+/classes
+/.lein-*
+/.nrepl-port
+/checkouts
 *.iml
 *.ipr
 *.iws
 *.log
+*.jar
+*.class
 .DS_Store
